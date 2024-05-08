@@ -261,4 +261,4 @@ const numArgs = (...args) => {
     }
 return output;
 }
-console.log('Exercise 14 result:', numArgs('one', 'two', 'three', 'four', 'five', 'six'));
+console.log('Exercise 14 result:', numArgs('one', 'two', 3, 'four', 5, 'six'));
