@@ -12,7 +12,7 @@ const maxOfTwoNumbers = (x, y) => {
         return y;
     }
 }
-console.log('Excercise 1 Result:', maxOfTwoNumbers(3, 9));
+console.log('Excercise 1 result:', maxOfTwoNumbers(3, 9));
 
 /*
 Exercise 2: isAdult()
@@ -28,7 +28,7 @@ const isAdult = (age) => {
         return 'Minor'
     }
 }
-console.log('Exercise 2 Result:', isAdult(21));
+console.log('Exercise 2 result:', isAdult(21));
 
 /*
 Exercise 3: isCharAVowel()
@@ -54,7 +54,7 @@ const isCharAVowel = (x) => {
         return 'false';
     }
 }
-console.log('Exercise 3 Result:', isCharAVowel('k'));
+console.log('Exercise 3 result:', isCharAVowel('k'));
 
 /*
 Exercise 4: generateEmail()
@@ -68,7 +68,7 @@ Complete the exercise in the space below:
 const generateEmail = (name, domain) => {
     return `${name}@${domain}`;
 }
-console.log('Exercise 4 Result:', generateEmail('BeauX', 'hotmail.com')); 
+console.log('Exercise 4 result:', generateEmail('BeauX', 'hotmail.com')); 
 
 /*
 Exercise 5: greetUser()
@@ -83,7 +83,7 @@ Complete the exercise in the space below:
 const greetUser = (name, timeOfDay) => {
     return `Good${timeOfDay}, ${name}!`
 }
-console.log('exercise 5 Result:', greetUser('BeauX', 'afternoon'));
+console.log('exercise 5 result:', greetUser('BeauX', 'afternoon'));
 
 /*
 Exercise 6: reverseString()
@@ -97,7 +97,7 @@ Complete the exercise in the space below:
       return word.split('').reverse().join('');
  }
 
-console.log('Exercise 6 Result:', reverseString('JavaScript Is Cool'));
+console.log('Exercise 6 result:', reverseString('JavaScript Is Cool'));
 
 /*
 Exercise 7: checkPalindrome()
@@ -116,7 +116,7 @@ const checkPalindrome = (vocab) => {
         return 'False';
     }
 }
-console.log('Exercise 7 Result:', checkPalindrome('rotator'));
+console.log('Exercise 7 result:', checkPalindrome('rotator'));
 
 /*
 Exercise 8: maxOfThree()
@@ -135,7 +135,7 @@ const maxOfThree = (num1, num2, num3) => {
     return num3;
    }
 }
-console.log('Exercise 8 Result:', maxOfThree(2, 15, 46));
+console.log('Exercise 8 result:', maxOfThree(2, 15, 46));
 
 /*
 Exercise 9: calculateTip()
@@ -151,7 +151,7 @@ const calculateTip = (bill, tip) => {
     percent = tip/100;
     return bill * percent;
 }
-console.log('Exercise 9 Result:', calculateTip(50, 20));
+console.log('Exercise 9 result:', calculateTip(50, 20));
 
 /*
 Exercise 10: convertTemperature()
@@ -165,9 +165,100 @@ Complete the exercise in the space below:
 */
  const convertTemperature = (temp, scale) => {
     if (scale === 'C') {
-    return temp * 9;
+    tempF = temp * (9 / 5) + 32;
+    return tempF;
     } else if (scale === 'F') {
-    return temp * 10;
+    tempC = temp * (9 / 5) - 32;
+    return `%{tempC} C`;
    }
  }
- console.log('Exercise 10 Result:', convertTemperature(40, 'Fk'));
+ console.log('Exercise 10 result:', convertTemperature(40, 'C'));
+
+ /*
+Exercise 11: basicCalculator()
+Create a function named basicCalculator. It should take three arguments: 
+two numbers and a string representing an operation ('add', 'subtract', 'multiply',
+'divide'). Perform the provided operation on the two numbers. In operations where 
+the order of numbers is important, treat the first parameter as the first operand 
+and the second parameter as the second operand.
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+Complete the exercise in the space below:
+*/
+
+const basicCalculator = (num4, num5, operator) => {
+    if (operator === 'add'){
+        return num4 + num5;
+    } else if (operator === 'subtract') {
+        return num4 - num5;
+    } else if (operator === 'multiply') {
+        return num4 * num5;    
+    } else if (operator === 'divide') {
+        return num4 / num5;
+    }
+}
+console.log('Exercise 11 result:', basicCalculator(10, 5, 'add'));
+
+/*
+Exercise 12: calculateGrade()
+Define a function called calculateGrade. It should take a numerical score and 
+return the corresponding letter grade (A, B, C, D, F). For example, 90 and above 
+yields an 'A', 80-89 is a 'B', and 70-79 is a 'C', 60-69 is a 'D' and anything lower 
+than a 60 is an 'F'.
+Example: calculateGrade(100) should return A.
+Complete the exercise in the space below:
+*/
+
+const calculateGrade = (gradeNum) => {
+    if (gradeNum > 100) {
+        return 'Liar!';
+    } else if(gradeNum <= 100 && gradeNum >= 90) {
+        return 'A';
+    } else if(gradeNum <90 && gradeNum >= 80) {
+        return 'B';
+    } else if(gradeNum <80 && gradeNum >= 70) {
+        return 'C';
+    } else if(gradeNum <70 && gradeNum >= 60) {
+        return 'D';
+    } else if(gradeNum <60 &&  gradeNum>= 0) {
+        return 'F';
+    } else if(gradeNum < 0) {
+        return "How'd you manage that ?!?"
+    }
+}
+
+console.log('Exercise 12 result:', calculateGrade(-57));
+
+/*
+Exercise 13: createUsername()
+Define a function called createUsername. It should take a first name and a 
+last name and return a username. The username should be a combination of the 
+following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+Example: createUsername('Samantha', 'Green') should return 'SamGre12'.
+Complete the exercise in the space below:
+*/
+
+const createUserName = (firstName, lastName) => {
+    let userFirst = firstName.slice(0,3);
+    let userLast = lastName.slice(0,3);
+    let nameNum = firstName.length + lastName.length;
+    return `${userFirst}${userLast}${nameNum}`;
+}
+console.log('Exercise 13 result:', createUserName('Samantha', 'Green'));
+
+/*
+Exercise 14: numArgs()
+Challenge yourself with numArgs. This function should return 
+the count of arguments passed to it when called.
+Complete the exercise in the space below:
+*/
+
+const numArgs = (...args) => {
+    let output = 0 
+        output = output + args.length; {
+    }
+return output;
+}
+console.log('Exercise 14 result:', numArgs('one', 'two', 'three', 'four', 'five', 'six'));
