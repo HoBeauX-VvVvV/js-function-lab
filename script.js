@@ -54,7 +54,7 @@ const isCharAVowel = (x) => {
         return 'false';
     }
 }
-console.log('Exercise 3 result:', isCharAVowel('k'));
+console.log('Exercise 3 result:', isCharAVowel('o'));
 
 /*
 Exercise 4: generateEmail()
@@ -93,11 +93,23 @@ Example: reverseString('rockstar') should return the string
 "ratskcor".
 Complete the exercise in the space below:
 */
- const reverseString = (word) => {
-      return word.split('').reverse().join('');
- }
+const reverseString = (word) => {
+    return word.split('').reverse().join('');
+}
 
 console.log('Exercise 6 result:', reverseString('JavaScript Is Cool'));
+
+/*
+const reverseString = (word) => {
+    let reverse = ''
+    for (let idx = reverseString.length-1; idx >= 0; idx--) {
+       let currentChar = word[idx]
+       reverse+=currentChar
+       console.log(reverse);
+    }reverseString(unknown);
+}
+*/
+
 
 /*
 Exercise 7: checkPalindrome()
@@ -165,11 +177,11 @@ Complete the exercise in the space below:
 */
  const convertTemperature = (temp, scale) => {
     if (scale === 'C') {
-    tempF = temp * (9 / 5) + 32;
-    return tempF;
+    tempf = temp * (9 / 5) + 32;
+    return `${tempf}F`;
     } else if (scale === 'F') {
-    tempC = temp * (9 / 5) - 32;
-    return `%{tempC} C`;
+    tempc = temp * (9 / 5) - 32;
+    return `{tempc}C`;
    }
  }
  console.log('Exercise 10 result:', convertTemperature(40, 'C'));
