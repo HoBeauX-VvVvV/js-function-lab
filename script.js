@@ -40,21 +40,21 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */ 
 const isCharAVowel = (x) => {
-    if (x === 'a') {
+    if (x === 'a' || x === 'A') {
         return 'true';
-    } else if (x === 'e') {
+    } else if (x === 'e' || x === 'E') {
         return 'true';
-    } else if (x === 'i') {
+    } else if (x === 'i' || x === 'I') {
         return 'true';
-    } else if (x === 'o') {
+    } else if (x === 'o' || x === 'O') {
         return 'true';
-    } else if (x === 'u') {
+    } else if (x === 'u' || x === 'U') {
         return 'true';
     } else {
         return 'false';
     }
 }
-console.log('Exercise 3 result:', isCharAVowel('o'));
+console.log('Exercise 3 result:', isCharAVowel('E'));
 
 /*
 Exercise 4: generateEmail()
@@ -81,7 +81,7 @@ Complete the exercise in the space below:
 */
 
 const greetUser = (name, timeOfDay) => {
-    return `Good${timeOfDay}, ${name}!`
+    return `Good ${timeOfDay}, ${name}!`
 }
 console.log('exercise 5 result:', greetUser('BeauX', 'afternoon'));
 
@@ -177,14 +177,14 @@ Complete the exercise in the space below:
 */
  const convertTemperature = (temp, scale) => {
     if (scale === 'C') {
-    tempf = temp * (9 / 5) + 32;
+    tempf = (temp * (9 / 5) + 32).toFixed(1);
     return `${tempf}F`;
     } else if (scale === 'F') {
-    tempc = temp * (9 / 5) - 32;
-    return `{tempc}C`;
+    tempc = ((temp - 32) * 5/9).toFixed(1);
+    return `${tempc}C`;
    }
  }
- console.log('Exercise 10 result:', convertTemperature(40, 'C'));
+ console.log('Exercise 10 result:', convertTemperature(90, 'F'));
 
  /*
 Exercise 11: basicCalculator()
@@ -238,7 +238,7 @@ const calculateGrade = (gradeNum) => {
     }
 }
 
-console.log('Exercise 12 result:', calculateGrade(-57));
+console.log('Exercise 12 result:', calculateGrade(85));
 
 /*
 Exercise 13: createUsername()
